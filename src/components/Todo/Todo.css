@@ -1,0 +1,84 @@
+.todoitem.done {
+  text-decoration-line: line-through;
+  color: #888;
+}
+body,
+.container {
+  box-sizing: border-box;
+}
+.icon-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+  outline: 0;
+
+}
+.svg-button {
+  border: 0;
+  margin: 0;
+  opacity: 1;
+  padding: 5px;
+  border-radius: 9999px;
+  background: transparent;
+  width: fit-content;
+  height: fit-content;
+}
+svg {
+  border-radius: 9999px;
+}
+.add-button svg{
+
+  stroke: rgba(255, 255, 255, .75);
+}
+.add-button svg:hover {
+  fill: #ddd;
+
+}
+.delete-button svg {
+  fill: #fff;
+}
+.delete-button svg:hover {
+  fill: red;
+  transition: fill 500ms ease-out 0s;
+}
+.todoitem {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.todoitem:before {
+  content: counter(counter) '.';
+  margin-right: 10px;
+}
+.todoitem {
+  counter-increment: counter;
+  margin: 15px 0;
+}
+.todoitem:hover {
+  opacity: 0.75;
+}
+.form-check {
+  margin: 0;
+  padding: 0;
+}
+.add-todo {
+  margin: 15px 0;
+  border: 2px solid #444;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: inset 0 -4px 0 0 #444;
+}
+
+.add-todo input {
+  border: 0;
+  outline: 0;
+  font-size: 1em;
+  padding: 10px;
+  width: 90%;
+  box-shadow: inset 0 -4px 0 0 #444;
+  background: rgba(255, 255, 255, .75);
+}
