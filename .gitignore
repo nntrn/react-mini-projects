@@ -1,11 +1,10 @@
 .DS_STORE
 node_modules
 scripts/flow/*/.flowconfig
-*.pyc
-.grunt
-_SpecRunner.html
-__benchmarks__
+src/components/*/css/
+src/tests/
 build/
+
 coverage/
 .module-cache
 *.log*
