@@ -9,7 +9,7 @@
     "demos"
   ],
   "author": "annie tran",
-  "homepage": "http://nntrn.github.io/react-mini-pages",
+  "homepage": "https://nntrn.github.io/react-mini-projects/",
   "dependencies": {
     "react": "^16.8.6",
     "react-chartjs": "^1.2.0",
@@ -28,6 +28,7 @@
     "tabWidth": 2
   },
   "scripts": {
+    "clear-babel-cache": "rm -rf ./node_modules/.cache/babel-loader/*",
     "build-css": "node-sass-chokidar css/ -o css/",
     "start": "react-scripts start",
     "build": "react-scripts build",
