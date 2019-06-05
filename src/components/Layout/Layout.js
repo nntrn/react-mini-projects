@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 import Todo from '../Todo'
 import Confetti from '../Confetti'
@@ -8,7 +8,8 @@ import pages, { references, makeObjArr } from './Source'
 import './Layout.css'
 
 function getWindowPath() {
-  return window.location.pathname.replace('/', '')
+  let hrefSplit = window.location.href.split('/')
+  return hrefSplit[hrefSplit.length - 1]
 }
 function windowNotHome() {
   if (getWindowPath()) {
@@ -39,6 +40,7 @@ class Layout extends Component {
             <div className="container">
               <div className="page-contents" style={{ position: 'relative' }}>
                 <div className="project">
+                  <Route path="/" exact component={Home} />
                   <Route path="/todo" exact component={Todo} />
                   <Route path="/confetti" exact component={Confetti} />
                 </div>
@@ -76,5 +78,5 @@ class Layout extends Component {
     )
   }
 }
-
+const Home = () => <></>
 export default Layout

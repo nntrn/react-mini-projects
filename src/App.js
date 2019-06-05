@@ -6,4 +6,5 @@ class App extends React.Component {
     return <Layout />
   }
 }
+
 export default App
