@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-mini-pages/static/css/main.dae82859.chunk.css",
+    "main.js": "/react-mini-pages/static/js/main.8b197464.chunk.js",
+    "main.js.map": "/react-mini-pages/static/js/main.8b197464.chunk.js.map",
+    "runtime~main.js": "/react-mini-pages/static/js/runtime~main.c20cd791.js",
+    "runtime~main.js.map": "/react-mini-pages/static/js/runtime~main.c20cd791.js.map",
+    "static/js/2.03291fbd.chunk.js": "/react-mini-pages/static/js/2.03291fbd.chunk.js",
+    "static/js/2.03291fbd.chunk.js.map": "/react-mini-pages/static/js/2.03291fbd.chunk.js.map",
+    "index.html": "/react-mini-pages/index.html",
+    "precache-manifest.810c017a8922fe2ae8814c97290bb82a.js": "/react-mini-pages/precache-manifest.810c017a8922fe2ae8814c97290bb82a.js",
+    "service-worker.js": "/react-mini-pages/service-worker.js",
+    "static/css/main.dae82859.chunk.css.map": "/react-mini-pages/static/css/main.dae82859.chunk.css.map"
+  }
+}
