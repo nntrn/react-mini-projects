@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
 import './Todo.css'
+import IcoMoon from 'react-icomoon'
 
 class TodoApp extends React.Component {
   constructor(props) {
@@ -42,7 +43,6 @@ class TodoApp extends React.Component {
       return item
     })
 
-    // State Updates are Merged
     this.setState({
       items: [].concat(updatedItems)
     })
@@ -64,22 +64,10 @@ class TodoApp extends React.Component {
           <input type="text" onChange={this.handleTextChange} value={this.state.text} />
           <button
             onClick={this.handleAddItem}
-            className="svg-button icon-container add-button"
+            className="svg-button add-button"
             disabled={!this.state.text}
           >
-            <svg
-              width="25"
-              height="25"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#7c7c7c"
-              strokeWidth="2"
-              className="blue"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="16" />
-              <line x1="8" y1="12" x2="16" y2="12" />
-            </svg>
+            <IcoMoon icon="plus" className="sm" />
           </button>
         </form>
         <TodoList
@@ -112,10 +100,8 @@ class TodoItem extends React.Component {
         <div style={{ width: '90%' }} onClick={this.markCompleted}>
           {this.props.text}
         </div>
-        <button type="button" className="delete-button svg-button" onClick={this.deleteItem}>
-          <svg viewBox="0 0 16 16" width="11" height="11">
-            <path d="M10.3 8l5-5c.6-.6.6-1.7 0-2.3-.6-.7-1.7-.7-2.3 0l-5 5-5-5C2.4 0 1.3 0 .7.7 0 1.3 0 2.4.7 3l5 5-5 5c-.6.6-.6 1.7 0 2.3s1.7.6 2.3 0l5-5 5 5c.6.6 1.7.6 2.3 0s.6-1.7 0-2.3l-5-5z" />
-          </svg>
+        <button type="button" className="svg-button delete-button" onClick={this.deleteItem}>
+          <IcoMoon icon="cross" className="sm " />
         </button>
       </li>
     )
