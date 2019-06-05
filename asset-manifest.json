@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-mini-pages/static/css/main.dae82859.chunk.css",
+    "main.css": "/react-mini-pages/static/css/main.879bbc8c.chunk.css",
     "main.js": "/react-mini-pages/static/js/main.20b462e3.chunk.js",
     "main.js.map": "/react-mini-pages/static/js/main.20b462e3.chunk.js.map",
     "runtime~main.js": "/react-mini-pages/static/js/runtime~main.c20cd791.js",
@@ -8,8 +8,8 @@
     "static/js/2.3f63bec3.chunk.js": "/react-mini-pages/static/js/2.3f63bec3.chunk.js",
     "static/js/2.3f63bec3.chunk.js.map": "/react-mini-pages/static/js/2.3f63bec3.chunk.js.map",
     "index.html": "/react-mini-pages/index.html",
-    "precache-manifest.12338ecbbf07fadde60a43c7b31911ee.js": "/react-mini-pages/precache-manifest.12338ecbbf07fadde60a43c7b31911ee.js",
+    "precache-manifest.5acc9951722b84619804ee34d3758b67.js": "/react-mini-pages/precache-manifest.5acc9951722b84619804ee34d3758b67.js",
     "service-worker.js": "/react-mini-pages/service-worker.js",
-    "static/css/main.dae82859.chunk.css.map": "/react-mini-pages/static/css/main.dae82859.chunk.css.map"
+    "static/css/main.879bbc8c.chunk.css.map": "/react-mini-pages/static/css/main.879bbc8c.chunk.css.map"
   }
 }
