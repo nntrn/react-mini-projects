@@ -29,7 +29,7 @@ function Clock() {
 
   const handleAmPm = () =>
     setTimeOfDay(() => {
-      return ampm == 0 ? 1 : 0
+      return ampm === 0 ? 1 : 0
     })
 
   return (

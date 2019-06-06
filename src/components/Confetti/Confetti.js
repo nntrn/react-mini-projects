@@ -4,7 +4,7 @@ import './Confetti.css'
 
 class Confetti extends React.Component {
   render() {
-    return <p>confetti</p>
+    return <h1>confetti</h1>
   }
 }
 export default Confetti

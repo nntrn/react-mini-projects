@@ -36,8 +36,12 @@ export const references = {
     ]
   },
   confetti: {
-    title: ['react-confetti', 'Burey on sololearn'],
-    url: ['https://github.com/alampros/react-confetti', 'https://code.sololearn.com/Wg7AAeBKzHaj/']
+    title: ['react-confetti', 'Burey on sololearn', 'Eloquent Javascript: Drawing on Canvas'],
+    url: [
+      'https://github.com/alampros/react-confetti',
+      'https://code.sololearn.com/Wg7AAeBKzHaj/',
+      'https://eloquentjavascript.net/17_canvas.html'
+    ]
   },
 
   clock: {

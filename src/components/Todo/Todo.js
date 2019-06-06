@@ -58,16 +58,12 @@ class TodoApp extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h3>TO DO LIST</h3>
-        <form className="add-todo ">
+      <div className="todo">
+        <h3 className="title">TO DO LIST</h3>
+        <form className="sm-form" style={{ display: 'flex' }}>
           <input type="text" onChange={this.handleTextChange} value={this.state.text} />
-          <button
-            onClick={this.handleAddItem}
-            className="svg-button add-button"
-            disabled={!this.state.text}
-          >
-            <IcoMoon icon="plus" className="sm" />
+          <button onClick={this.handleAddItem} disabled={!this.state.text}>
+            ok
           </button>
         </form>
         <TodoList
