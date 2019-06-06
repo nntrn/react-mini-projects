@@ -18,6 +18,10 @@ header {
   color: #fff;
   padding: 0.5rem 0;
 }
+header a {
+  color: white;
+  text-decoration: none;
+}
 .container {
   overflow: hidden;
   display: flex;
@@ -73,34 +77,41 @@ header {
   .references {
     box-sizing: border-box;
     width: 100%;
-    min-height: 20vh !important;
-    background: black;
+    height: fit-content;
     left: 0;
     bottom: 0;
     padding: 0.5rem;
     position: sticky;
-    overflow: scroll;
 
+    ul:empty {
+      display: none;
+    }
+    ul:before {
+      content: 'references';
+      font-weight: bold;
+      font-size: 1em;
+    }
     ul {
-      font-size: 0.7em;
+      font-size: 0.8em;
       padding-inline-start: 10px;
     }
     li {
       display: table !important;
       padding: 0.15rem 0;
     }
-    li:hover {
-      background: #444;
-    }
+
     li::before {
       content: '•';
       display: table-cell;
       color: red;
       margin-right: 0.5rem;
-      padding-right: 0.25rem;
+      padding-right: 0.5rem;
     }
     a {
-      color: white;
+      color: #444;
+    }
+    a:hover {
+      color: red;
     }
   }
 }

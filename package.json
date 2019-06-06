@@ -38,6 +38,7 @@
   "scripts": {
     "clear-babel-cache": "rm -rf ./node_modules/.cache/babel-loader/*",
     "prettier": "prettier --write src/**/*.{js,jsx,css,scss}",
+    "clean-build": "rm -rf build/ ",
     "build-css": "node-sass-chokidar ./src/ -o ./src/css/ && npm run prettier",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",

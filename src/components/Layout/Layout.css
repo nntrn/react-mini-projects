@@ -18,6 +18,10 @@ header {
   color: #fff;
   padding: 0.5rem 0; }
 
+header a {
+  color: white;
+  text-decoration: none; }
+
 .container {
   overflow: hidden;
   display: flex;
@@ -64,29 +68,33 @@ header {
   .container .references {
     box-sizing: border-box;
     width: 100%;
-    min-height: 20vh !important;
-    background: black;
+    height: fit-content;
     left: 0;
     bottom: 0;
     padding: 0.5rem;
-    position: sticky;
-    overflow: scroll; }
+    position: sticky; }
+    .container .references ul:empty {
+      display: none; }
+    .container .references ul:before {
+      content: 'references';
+      font-weight: bold;
+      font-size: 1em; }
     .container .references ul {
-      font-size: 0.7em;
+      font-size: 0.8em;
       padding-inline-start: 10px; }
     .container .references li {
       display: table !important;
       padding: 0.15rem 0; }
-    .container .references li:hover {
-      background: #444; }
     .container .references li::before {
       content: '•';
       display: table-cell;
       color: red;
       margin-right: 0.5rem;
-      padding-right: 0.25rem; }
+      padding-right: 0.5rem; }
     .container .references a {
-      color: white; }
+      color: #444; }
+    .container .references a:hover {
+      color: red; }
 
 *::-webkit-scrollbar {
   width: 0px; }

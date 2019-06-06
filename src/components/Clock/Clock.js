@@ -1,10 +1,21 @@
 import React, { useState } from 'react'
 import './Clock.css'
+import IcoMoon from 'react-icomoon'
+
+const initTime = {
+  now: new Date(),
+  hour: () => (initTime.now.getHours() === 0 ? 12 : initTime.now.getHours()),
+  minutes: () => initTime.now.getMinutes(),
+  ampm: () => {
+    return initTime.hour < 12 ? 0 : 1
+  },
+  normalTime: () => initTime.now.toTimeString()
+}
 
 function Clock() {
-  const [hour, setHour] = useState(7)
-  const [minutes, setMinutes] = useState(30)
-  const [time, setTimeOfDay] = useState(0)
+  const [hour, setHour] = useState(initTime.hour)
+  const [minutes, setMinutes] = useState(initTime.minutes)
+  const [ampm, setTimeOfDay] = useState(initTime.ampm)
 
   const handleHour = () =>
     setHour(() => {
@@ -18,17 +29,21 @@ function Clock() {
 
   const handleAmPm = () =>
     setTimeOfDay(() => {
-      return time == 0 ? 1 : 0
+      return ampm == 0 ? 1 : 0
     })
 
   return (
-    <>
-      <div className="info-banner" style={{ marginBottom: '20px' }}>
-        easily update hour, minutes, and time of day using Hooks in <em>React 16.8</em>
-      </div>
+    <div className={'container time-' + ampm}>
       <center>
-        <div className={'clock no-flow ' + 'time-' + time}>
-          <div className="time">
+        <div className={'time-' + ampm}>
+          <button className={'ampm time-' + ampm} onClick={handleAmPm}>
+            <IcoMoon
+              icon={ampm === 0 ? 'sun' : 'cloud'}
+              className="clock-icon"
+              time={ampm === 0 ? 'AM' : 'PM'}
+            />
+          </button>
+          <div className="clock">
             <button className="analog" onClick={handleHour}>
               {hour}
             </button>
@@ -38,12 +53,12 @@ function Clock() {
               {minutes}
             </button>
           </div>
-          <button className={'small time-' + time} onClick={handleAmPm}>
-            {time === 0 ? 'AM' : 'PM'}
-          </button>
+          <div className="info-banner" style={{ marginBottom: '20px' }}>
+            created using Hooks
+          </div>
         </div>
       </center>
-    </>
+    </div>
   )
 }
 

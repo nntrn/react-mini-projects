@@ -35,13 +35,12 @@ export const references = {
       'https://inclusive-components.design/a-todo-list/'
     ]
   },
-  /*--*/
   confetti: {
     title: ['react-confetti', 'Burey on sololearn'],
     url: ['https://github.com/alampros/react-confetti', 'https://code.sololearn.com/Wg7AAeBKzHaj/']
   },
-  /*--*/
-  hooks: {
+
+  clock: {
     title: [
       'React Hooks Cheatsheet by @ohansemmanuel',
       'React Hooks cheat sheet: Unlock solutions to common problems',
@@ -56,10 +55,6 @@ export const references = {
       'https://medium.com/swlh/manage-global-state-with-react-hooks-b9e413a2c309',
       'https://taniarascia.github.io/react-hooks/'
     ]
-  },
-  clock: {
-    title: [],
-    url: []
   },
   new: {
     title: [],
@@ -82,12 +77,6 @@ const source = [
   },
   {
     id: 2,
-    title: 'Hooks',
-    url: '/hooks',
-    references: makeObjArr(references.hooks)
-  },
-  {
-    id: 3,
     title: 'Clock',
     url: '/clock',
     references: makeObjArr(references.clock)

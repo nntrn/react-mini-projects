@@ -35,7 +35,9 @@ class Layout extends React.Component {
       <Router>
         <Switch>
           <div className="container">
-            <header>react-mini-projects</header>
+            <header>
+              <a href="https://github.com/nntrn/react-mini-projects">react-mini-projects</a>
+            </header>
             <br />
             <div className="menu">
               <ul className="list-unstyled">
