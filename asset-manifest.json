@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-mini-projects/static/css/main.bcbd09e1.chunk.css",
-    "main.js": "/react-mini-projects/static/js/main.12471eb6.chunk.js",
-    "main.js.map": "/react-mini-projects/static/js/main.12471eb6.chunk.js.map",
+    "main.css": "/react-mini-projects/static/css/main.afe07d31.chunk.css",
+    "main.js": "/react-mini-projects/static/js/main.f31a58d8.chunk.js",
+    "main.js.map": "/react-mini-projects/static/js/main.f31a58d8.chunk.js.map",
     "runtime~main.js": "/react-mini-projects/static/js/runtime~main.58882aaa.js",
     "runtime~main.js.map": "/react-mini-projects/static/js/runtime~main.58882aaa.js.map",
-    "static/js/2.0de9ac4f.chunk.js": "/react-mini-projects/static/js/2.0de9ac4f.chunk.js",
-    "static/js/2.0de9ac4f.chunk.js.map": "/react-mini-projects/static/js/2.0de9ac4f.chunk.js.map",
+    "static/js/2.35fc07b0.chunk.js": "/react-mini-projects/static/js/2.35fc07b0.chunk.js",
+    "static/js/2.35fc07b0.chunk.js.map": "/react-mini-projects/static/js/2.35fc07b0.chunk.js.map",
     "index.html": "/react-mini-projects/index.html",
-    "precache-manifest.0552a2a0824917c02fca06b818e3f00b.js": "/react-mini-projects/precache-manifest.0552a2a0824917c02fca06b818e3f00b.js",
+    "precache-manifest.b78b32e94cdaaa4bc8b45948dd5b05bd.js": "/react-mini-projects/precache-manifest.b78b32e94cdaaa4bc8b45948dd5b05bd.js",
     "service-worker.js": "/react-mini-projects/service-worker.js",
-    "static/css/main.bcbd09e1.chunk.css.map": "/react-mini-projects/static/css/main.bcbd09e1.chunk.css.map"
+    "static/css/main.afe07d31.chunk.css.map": "/react-mini-projects/static/css/main.afe07d31.chunk.css.map"
   }
 }
