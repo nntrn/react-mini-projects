@@ -1,5 +1,5 @@
 {
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -17,7 +17,9 @@
   "rules": {
     "semi": [2, "never"],
     "quotes": [2, "single"],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "settings": {
     "import/extensions": [".js", ".jsx"]
