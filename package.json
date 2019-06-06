@@ -37,15 +37,17 @@
   },
   "scripts": {
     "clear-babel-cache": "rm -rf ./node_modules/.cache/babel-loader/*",
-    "prettier": "prettier --write src/**/*.{js,jsx,json,css,scss,md}",
-    "build-css": "node-sass-chokidar src/ -o src/ && npm run prettier",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "prettier": "prettier --write src/**/*.{js,jsx,css,scss}",
+    "build-css": "node-sass-chokidar ./src/ -o ./src/css/ && npm run prettier",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "watch": "tsc -watch -p ./"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

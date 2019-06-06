@@ -3,6 +3,8 @@ import { HashRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 import Todo from '../Todo'
 import Confetti from '../Confetti'
+import Hooks from '../Hooks'
+import Clock from '../Clock'
 
 import pages, { references, makeObjArr } from './Source'
 import './Layout.css'
@@ -18,7 +20,7 @@ function windowNotHome() {
   return false
 }
 
-class Layout extends Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -26,53 +28,50 @@ class Layout extends Component {
       references: references
     }
   }
-
   render() {
     const { pages, references } = this.state
 
     return (
       <Router>
         <Switch>
-          <>
-            <header style={{ textAlign: 'center', width: '100%', padding: '0 2rem' }}>
-              react-mini-projects
-            </header>
-            <div className="container">
-              <div className="page-contents" style={{ position: 'relative' }}>
-                <div className="project">
-                  <Route path="/" exact component={Home} />
-                  <Route path="/todo" exact component={Todo} />
-                  <Route path="/confetti" exact component={Confetti} />
-                </div>
-
-                {/* FIXME: setstate to display correct references for page changes  */}
-
-                {windowNotHome && (
-                  <div className="references" style={{ position: 'absolute', bottom: 0 }}>
-                    <ul>
-                      {makeObjArr(references[getWindowPath()]).map(source => (
-                        <li key={source.title}>
-                          <a href={source.url} title={source.title}>
-                            {source.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-
-              <div className="menu">
-                <ul className="toc list-unstyled">
-                  {pages.map(page => (
-                    <li key={page.id}>
-                      <Link to={page.url}>{page.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="container">
+            <header>react-mini-projects</header>
+            <br />
+            <div className="menu">
+              <ul className="list-unstyled">
+                {pages.map(page => (
+                  <li key={page.id}>
+                    <Link to={page.url}>{page.title}</Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </>
+            <div className="project">
+              <Route path="/" exact component={Home} />
+              <Route path="/todo" exact component={Todo} />
+              <Route path="/confetti" exact component={Confetti} />
+              <Route path="/hooks" exact component={Hooks} />
+              <Route path="/clock" exact component={Clock} />
+            </div>
+
+            {/* FIXME: setstate to display correct references for page changes  */}
+
+            {windowNotHome && (
+              <div className="references">
+                <div className="box">
+                  <ul>
+                    {makeObjArr(references[getWindowPath()]).map(source => (
+                      <li key={source.title}>
+                        <a href={source.url} title={source.title}>
+                          {source.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
         </Switch>
       </Router>
     )
