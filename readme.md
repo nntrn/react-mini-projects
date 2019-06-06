@@ -1,7 +1,19 @@
-## bookmarks
+# setting up
 
-- [Use ESLint Like a Pro with ES6 and React](http://www.zsoltnagy.eu/use-eslint-like-a-pro-with-es6-and-react/)
-- [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate/blob/master/package.json)
-- [Functional vs Class-Components in React](https://medium.com/@Zwenza/functional-vs-class-components-in-react-231e3fbd7108) by David Joch
-- React 16.8
-  - [Hooks State](https://reactjs.org/docs/hooks-state.html)
+```
+git clone https://github.com/nntrn/react-mini-projects.git
+cd react-mini-projects
+npm install
+npm start
+```
+
+http://localhost:3000
+
+## deploying to github pages:
+
+make sure `gh-pages` is installed
+
+    npm install gh-pages --save-dev
+
+1. update **homepage** in `package.json` with your settings
+2. `npm run deploy`
