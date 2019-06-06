@@ -1,0 +1,68 @@
+//colors
+$white: #fff;
+$corn: #f1c40f;
+$boston_blue: #2980b9;
+
+.no-flow {
+  overflow: hidden !important;
+}
+.info-banner {
+  font-size: 0.8em;
+}
+.clock {
+  display: block;
+  margin: 1.25rem;
+  position: relative;
+  background: $white;
+
+  button {
+    border: 0;
+    outline: 0;
+  }
+
+  .time {
+    display: inline-flex;
+    font-size: 3.25em;
+    text-align: center;
+    user-select: none;
+    padding: 5px;
+  }
+
+  .analog {
+    border-radius: 10px;
+    margin: 0 0.25rem;
+    padding: 5px;
+  }
+}
+
+.blinking {
+  animation: blinker 1100ms linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.time-0 {
+  .analog {
+    border: 1px solid $corn;
+    background: #f1c40f30;
+  }
+
+  * {
+    color: $corn;
+  }
+}
+
+.time-1 {
+  .analog {
+    border: 1px solid $boston_blue;
+    background: #2980b930;
+  }
+
+  * {
+    color: $boston_blue;
+  }
+}
