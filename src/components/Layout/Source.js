@@ -43,7 +43,6 @@ export const references = {
       'https://eloquentjavascript.net/17_canvas.html'
     ]
   },
-
   clock: {
     title: [
       'React Hooks Cheatsheet by @ohansemmanuel',
@@ -71,20 +70,20 @@ export const references = {
 }
 
 // create and return object array for all pages
-const pages = Object.keys(references)
-function sources() {
-  var sourcesArr = []
+function createSourcePages(pages) {
+  var arr = []
   pages.forEach((e, i) => {
-    sourcesArr.push({
+    arr.push({
       id: i,
       title: e.charAt(0).toUpperCase() + e.slice(1),
       url: '/' + e,
       references: makeObjArr(references[e])
     })
   })
-  return sourcesArr
+  return arr
 }
 
-const source = sources()
+const pages = Object.keys(references)
+const source = createSourcePages(pages)
 
 export default source
