@@ -3,6 +3,7 @@ node_modules
 scripts/flow/*/.flowconfig
 src/tests/
 build/
+src/components/*/*.css
 
 coverage/
 .module-cache

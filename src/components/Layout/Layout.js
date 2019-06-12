@@ -5,6 +5,7 @@ import Todo from '../Todo'
 import Confetti from '../Confetti'
 import Hooks from '../Hooks'
 import Clock from '../Clock'
+import Weather from '../Weather'
 
 import pages, { references, makeObjArr } from './Source'
 import './Layout.css'
@@ -54,6 +55,7 @@ class Layout extends React.Component {
               <Route path="/confetti" exact component={Confetti} />
               <Route path="/hooks" exact component={Hooks} />
               <Route path="/clock" exact component={Clock} />
+              <Route path="/weather" exact component={Weather} />
             </div>
 
             {/* FIXME: setstate to display correct references for page changes  */}

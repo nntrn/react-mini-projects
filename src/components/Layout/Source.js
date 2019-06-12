@@ -60,30 +60,34 @@ export const references = {
       'https://taniarascia.github.io/react-hooks/'
     ]
   },
-  new: {
-    title: [],
-    url: []
+  weather: {
+    title: ['AJAX Requests in React: How and Where to Fetch Data', 'weather.gov api'],
+    url: [
+      'https://daveceddia.com/ajax-requests-in-react/',
+      'https://forecast-v3.weather.gov/documentation'
+    ]
   }
+  // new: {
+  //   title: [],
+  //   url: []
+  // }
 }
 
-const source = [
-  {
-    id: 0,
-    title: 'Todo',
-    url: '/todo',
-    references: makeObjArr(references.todo)
-  },
-  {
-    id: 1,
-    title: 'Confetti',
-    url: '/confetti',
-    references: makeObjArr(references.confetti)
-  },
-  {
-    id: 2,
-    title: 'Clock',
-    url: '/clock',
-    references: makeObjArr(references.clock)
-  }
-]
+// create and return object array for all pages
+const pages = Object.keys(references)
+function sourcesObjectArray() {
+  var arr = []
+  pages.forEach((e, i) => {
+    arr.push({
+      id: i,
+      title: e.charAt(0).toUpperCase() + e.slice(1),
+      url: '/' + e,
+      references: makeObjArr(references[e])
+    })
+  })
+  return arr
+}
+
+const source = sourcesObjectArray()
+
 export default source
