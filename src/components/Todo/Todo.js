@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './Todo.css'
+import './todo.css'
 import IcoMoon from 'react-icomoon'
 
 class TodoApp extends React.Component {
@@ -60,7 +60,7 @@ class TodoApp extends React.Component {
     return (
       <div className="todo">
         <h3 className="title">TO DO LIST</h3>
-        <form className="sm-form" style={{ display: 'flex' }}>
+        <form className="sm-form">
           <input type="text" onChange={this.handleTextChange} value={this.state.text} />
           <button onClick={this.handleAddItem} disabled={!this.state.text}>
             ok

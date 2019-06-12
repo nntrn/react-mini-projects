@@ -8,7 +8,7 @@ import Clock from '../Clock'
 import Weather from '../Weather'
 
 import pages, { references, makeObjArr } from './Source'
-import './Layout.css'
+import './layout.css'
 
 function getWindowPath() {
   let hrefSplit = window.location.href.split('/')

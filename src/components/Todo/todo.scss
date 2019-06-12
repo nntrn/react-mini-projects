@@ -1,77 +1,67 @@
-.svg-button {
-  border: 0;
-  border-radius: 9999px;
-  background: transparent;
-  outline: 0;
-}
-.icon {
-  width: 24px;
-  height: 24px;
-}
-.sm-form {
-  width: 80vw;
-}
-
-// .sm {
-//   width: 13px !important;
-//   height: 13px !important;
-// }
-
-.delete-button svg {
-  fill: transparent;
-  width: 10px !important;
-  height: 10px !important;
-  opacity: 0.7;
-  &:hover {
-    fill: #e74c3c !important;
-  }
-}
-
-.add-button {
-  border-radius: 0;
-  box-shadow: 0;
-  // box-shadow: inset 0 0px 0 3px rgba(255, 255, 255, 1);
-  // background: #222;
-  padding: 0;
-  margin-left: 0;
-  line-height: 0.5;
-
-  svg {
-    fill: #444 !important;
-  }
-  &:hover {
-    background: rgba(0, 0, 0, 0.75);
-    transition: background 200ms ease-out;
-  }
-}
-
-.todoitem {
-  max-width: 80vw;
+.todo {
   display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  counter-increment: counter;
-  margin: 15px 0;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
 
-  &.done {
-    text-decoration-line: line-through !important;
-    color: #888;
+  .sm-form {
+    display: inline-block;
+    border: 2px solid #222;
+
+    button {
+      width: 50px;
+      color: white;
+      background: #222;
+      &:hover {
+        background: lighten(#222, 20%);
+        transition: 100ms linear;
+      }
+    }
+    input {
+      outline: 0;
+      border: 0;
+      box-shadow: 0;
+    }
   }
 
-  div:hover {
-    font-style: italic;
+  .delete-button svg {
+    fill: transparent;
+    width: 10px !important;
+    height: 10px !important;
+    opacity: 0.7;
+    &:hover {
+      fill: #e74c3c !important;
+    }
   }
-}
 
-li.todoitem:before {
-  content: counter(counter) '.';
-  margin-right: 10px;
-}
-.form-check {
-  margin: 0;
-  padding: 0;
-}
-.flex {
-  display: flex;
-  background: red !important;
+  .todoitem {
+    max-width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    counter-increment: counter;
+    margin: 15px 0;
+    font-style: normal;
+    &:before {
+      content: counter(counter) '.';
+      margin-right: 10px;
+    }
+    &.done {
+      text-decoration-line: line-through !important;
+      color: #888;
+      &:hover {
+        color: #222;
+        text-decoration-line: none !important;
+      }
+    }
+
+    &:hover {
+      font-style: italic;
+    }
+  }
+
+  .form-check {
+    margin: 0;
+    padding: 0;
+  }
 }
