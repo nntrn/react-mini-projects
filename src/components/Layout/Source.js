@@ -43,6 +43,7 @@ export const references = {
       'https://eloquentjavascript.net/17_canvas.html'
     ]
   },
+
   clock: {
     title: [
       'React Hooks Cheatsheet by @ohansemmanuel',
@@ -60,8 +61,11 @@ export const references = {
     ]
   },
   weather: {
-    title: [],
-    url: []
+    title: ['AJAX Requests in React: How and Where to Fetch Data', 'weather.gov api'],
+    url: [
+      'https://daveceddia.com/ajax-requests-in-react/',
+      'https://forecast-v3.weather.gov/documentation'
+    ]
   }
   // new: {
   //   title: [],
@@ -70,7 +74,8 @@ export const references = {
 }
 
 // create and return object array for all pages
-function createSourcePages(pages) {
+const pages = Object.keys(references)
+function sourcesObjectArray() {
   var arr = []
   pages.forEach((e, i) => {
     arr.push({
@@ -83,7 +88,6 @@ function createSourcePages(pages) {
   return arr
 }
 
-const pages = Object.keys(references)
-const source = createSourcePages(pages)
+const source = sourcesObjectArray()
 
 export default source
