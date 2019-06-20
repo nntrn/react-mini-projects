@@ -58,7 +58,7 @@ class TodoApp extends React.Component {
   render() {
     return (
       <div id="todo">
-        <h3>TO DO LIST</h3>
+        <h2 className="project-title">TO DO LIST</h2>
         <form>
           <input type="text" onChange={this.handleTextChange} value={this.state.text} />
           <button onClick={this.handleAddItem} className="submit" disabled={!this.state.text}>

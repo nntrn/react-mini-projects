@@ -34,6 +34,7 @@ function Clock() {
 
   return (
     <div id="clock" className={'time-' + ampm}>
+      <h2 className="project-title">Clock</h2>
       <div className={'clock time-' + ampm}>
         <button className="time-button" onClick={handleHour}>
           {hour}

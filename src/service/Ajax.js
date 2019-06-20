@@ -48,7 +48,7 @@ export default class Ajax extends React.Component {
       return this.renderError()
     }
 
-    return this.props.config.output(ajaxRequest)
+    return this.props.config(ajaxRequest)
   }
 
   render() {

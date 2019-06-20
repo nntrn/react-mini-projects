@@ -6,10 +6,11 @@ import './weather.scss'
 const url = 'https://api.weather.gov/gridpoints/EWX/182,91/forecast'
 class Weather extends React.Component {
   render() {
-    const config = {
-      output(data) {
-        return (
-          <table id="weather">
+    const config = data => {
+      return (
+        <div id="weather">
+          <h2 className="project-title">weather API</h2>
+          <table>
             {data.properties['periods'].map(
               req =>
                 req.name.indexOf('Night') === -1 && (
@@ -35,8 +36,9 @@ class Weather extends React.Component {
               <a href="https://api.weather.gov/gridpoints/EWX/182,91/forecast">api.weather.gov</a>
             </caption>
           </table>
-        )
-      }
+          <div className="json">{JSON.stringify(data, null, 4)}</div>
+        </div>
+      )
     }
 
     return <Ajax url={url} config={config} />
