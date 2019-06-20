@@ -34,13 +34,14 @@ function Clock() {
 
   return (
     <div id="clock" className={'time-' + ampm}>
+      <h2 className="project-title">Clock</h2>
       <div className={'clock time-' + ampm}>
         <button className="time-button" onClick={handleHour}>
           {hour}
         </button>
         <span className="blinking">:</span>
         <button className="time-button" onClick={handleMinutes}>
-          {minutes < 10 ? '0' + minutes.toString() : minutes}
+          {minutes + 1 <= 10 ? '0' + minutes.toString() : minutes}
         </button>
         <button className={'ampm time-' + ampm} onClick={handleAmPm}>
           {time.timeOfDay[ampm]}

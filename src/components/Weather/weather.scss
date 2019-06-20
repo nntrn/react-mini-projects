@@ -3,3 +3,14 @@ table {
     border: 1px solid #ddd;
   }
 }
+
+.json {
+  display: block;
+  height: 40vh;
+  width: 70vw;
+  overflow: scroll;
+  font-family: monospace;
+  font-size: 0.9em;
+  white-space: pre-wrap;
+  margin: 0.5rem 0;
+}

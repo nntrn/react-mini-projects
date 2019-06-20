@@ -1,0 +1,79 @@
+$base: #222;
+$primary: #444;
+
+#github-activity {
+  .section {
+    margin: 1rem;
+    border: 1px solid $base;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .flex,
+  .avi {
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 0.8em;
+    flex-direction: row;
+  }
+
+  .contributions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1rem 0;
+  }
+
+  .avi {
+    border-radius: 50%;
+    border: 2px solid lighten($base, 60%);
+    margin: 0 0.25rem;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    &:hover:after {
+      content: attr(name);
+      position: absolute;
+      font-size: 11px;
+      bottom: 50%;
+      line-height: 1;
+      white-space: pre;
+      color: white;
+      background: black;
+      padding: 0 0.25rem;
+      z-index: 100;
+    }
+  }
+
+  .repo-list {
+    width: 250px;
+    white-space: pre-wrap;
+
+    .repo-name {
+      color: $base;
+      font-weight: bold;
+    }
+
+    .last-updated {
+      color: $primary;
+    }
+  }
+
+  .my {
+    margin: 1rem 0.5rem;
+  }
+
+  :before {
+    content: attr(value);
+  }
+}
