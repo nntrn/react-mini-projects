@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/react-mini-projects/static/css/main.e7f7154c.chunk.css",
-    "main.js": "/react-mini-projects/static/js/main.4af9c978.chunk.js",
-    "main.js.map": "/react-mini-projects/static/js/main.4af9c978.chunk.js.map",
+    "main.css": "/react-mini-projects/static/css/main.6f0c06da.chunk.css",
+    "main.js": "/react-mini-projects/static/js/main.49a6638e.chunk.js",
+    "main.js.map": "/react-mini-projects/static/js/main.49a6638e.chunk.js.map",
     "runtime~main.js": "/react-mini-projects/static/js/runtime~main.58882aaa.js",
     "runtime~main.js.map": "/react-mini-projects/static/js/runtime~main.58882aaa.js.map",
-    "static/js/2.a2f4cf05.chunk.js": "/react-mini-projects/static/js/2.a2f4cf05.chunk.js",
-    "static/js/2.a2f4cf05.chunk.js.map": "/react-mini-projects/static/js/2.a2f4cf05.chunk.js.map",
+    "static/css/2.2012106d.chunk.css": "/react-mini-projects/static/css/2.2012106d.chunk.css",
+    "static/js/2.d00ff004.chunk.js": "/react-mini-projects/static/js/2.d00ff004.chunk.js",
+    "static/js/2.d00ff004.chunk.js.map": "/react-mini-projects/static/js/2.d00ff004.chunk.js.map",
     "index.html": "/react-mini-projects/index.html",
-    "precache-manifest.d0ccc07a3df8a0bfcb90dcd96800e354.js": "/react-mini-projects/precache-manifest.d0ccc07a3df8a0bfcb90dcd96800e354.js",
+    "precache-manifest.d4b1ebcfbfa4ee9b54aaaa4fa6b6f164.js": "/react-mini-projects/precache-manifest.d4b1ebcfbfa4ee9b54aaaa4fa6b6f164.js",
     "service-worker.js": "/react-mini-projects/service-worker.js",
-    "static/css/main.e7f7154c.chunk.css.map": "/react-mini-projects/static/css/main.e7f7154c.chunk.css.map"
+    "static/css/2.2012106d.chunk.css.map": "/react-mini-projects/static/css/2.2012106d.chunk.css.map",
+    "static/css/main.6f0c06da.chunk.css.map": "/react-mini-projects/static/css/main.6f0c06da.chunk.css.map"
   }
 }
