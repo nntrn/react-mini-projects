@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
-import './Clock.css'
-import IcoMoon from 'react-icomoon'
+import './Clock.scss'
 
-const initTime = {
+const time = {
   now: new Date(),
-  hour: () => (initTime.now.getHours() === 0 ? 12 : initTime.now.getHours()),
-  minutes: () => initTime.now.getMinutes(),
+  hour: () => ((time.now.getHours() % 12 || 12) < 10 ? '0' : '') + (time.now.getHours() % 12 || 12),
+  minutes: () => time.now.getMinutes(),
   ampm: () => {
-    return initTime.hour < 12 ? 0 : 1
+    return time.hour < 12 ? '0' : '1'
   },
-  normalTime: () => initTime.now.toTimeString()
+  normalTime: () => time.now.toTimeString(),
+  timeOfDay: ['AM', 'PM']
 }
 
 function Clock() {
-  const [hour, setHour] = useState(initTime.hour)
-  const [minutes, setMinutes] = useState(initTime.minutes)
-  const [ampm, setTimeOfDay] = useState(initTime.ampm)
+  const [hour, setHour] = useState(time.hour)
+  const [minutes, setMinutes] = useState(time.minutes)
+  const [ampm, setTimeOfDay] = useState(time.ampm)
 
   const handleHour = () =>
     setHour(() => {
@@ -33,31 +33,19 @@ function Clock() {
     })
 
   return (
-    <div className={'container time-' + ampm}>
-      <center>
-        <div className={'time-' + ampm}>
-          <button className={'ampm time-' + ampm} onClick={handleAmPm}>
-            <IcoMoon
-              icon={ampm === 0 ? 'sun' : 'cloud'}
-              className="clock-icon"
-              time={ampm === 0 ? 'AM' : 'PM'}
-            />
-          </button>
-          <div className="clock">
-            <button className="analog" onClick={handleHour}>
-              {hour}
-            </button>
-            <span className="blinking">:</span>
-            <button className="analog" onClick={handleMinutes}>
-              {minutes < 10 && '0'}
-              {minutes}
-            </button>
-          </div>
-          <div className="info-banner" style={{ marginBottom: '20px' }}>
-            created using Hooks
-          </div>
-        </div>
-      </center>
+    <div id="clock" className={'time-' + ampm}>
+      <div className={'clock time-' + ampm}>
+        <button className="time-button" onClick={handleHour}>
+          {hour}
+        </button>
+        <span className="blinking">:</span>
+        <button className="time-button" onClick={handleMinutes}>
+          {minutes < 10 ? '0' + minutes.toString() : minutes}
+        </button>
+        <button className={'ampm time-' + ampm} onClick={handleAmPm}>
+          {time.timeOfDay[ampm]}
+        </button>
+      </div>
     </div>
   )
 }

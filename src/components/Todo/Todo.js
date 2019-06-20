@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import './todo.css'
-import IcoMoon from 'react-icomoon'
+import './todo.scss'
 
 class TodoApp extends React.Component {
   constructor(props) {
@@ -58,12 +57,12 @@ class TodoApp extends React.Component {
   }
   render() {
     return (
-      <div className="todo">
-        <h3 className="title">TO DO LIST</h3>
-        <form className="sm-form">
+      <div id="todo">
+        <h3>TO DO LIST</h3>
+        <form>
           <input type="text" onChange={this.handleTextChange} value={this.state.text} />
-          <button onClick={this.handleAddItem} disabled={!this.state.text}>
-            ok
+          <button onClick={this.handleAddItem} className="submit" disabled={!this.state.text}>
+            +
           </button>
         </form>
         <TodoList
@@ -92,13 +91,9 @@ class TodoItem extends React.Component {
 
   render() {
     return (
-      <li className={'todoitem ' + (this.props.completed ? 'done' : 'undone')}>
-        <div style={{ width: '90%' }} onClick={this.markCompleted}>
-          {this.props.text}
-        </div>
-        <button type="button" className="svg-button delete-button" onClick={this.deleteItem}>
-          <IcoMoon icon="cross" className="sm " />
-        </button>
+      <li className={this.props.completed ? 'done' : 'undone'}>
+        <span onClick={this.markCompleted}>{this.props.text}</span>
+        <button type="button" className="delete" onClick={this.deleteItem} />
       </li>
     )
   }
@@ -107,7 +102,7 @@ class TodoItem extends React.Component {
 class TodoList extends React.Component {
   render() {
     return (
-      <ul className="form-check">
+      <ul className="todo-list">
         {this.props.items.map(item => (
           <TodoItem
             key={item.id}

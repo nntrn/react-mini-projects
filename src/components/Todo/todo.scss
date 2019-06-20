@@ -1,67 +1,90 @@
-.todo {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  align-items: center;
+$base: #222;
+$delete: #e74c3c;
+$done: #2ecc71;
 
-  .sm-form {
-    display: inline-block;
-    border: 2px solid #222;
+#todo {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
 
-    button {
-      width: 50px;
-      color: white;
-      background: #222;
+  form {
+    display: flex;
+    margin: 0.25rem auto;
+    font-size: 0.9em;
+    border-radius: 3px;
+    border: 1px solid #222;
+
+    .submit {
+      font-size: 1.25em;
+      padding: 0 0.5rem;
+      z-index: 90;
+
       &:hover {
-        background: lighten(#222, 20%);
-        transition: 100ms linear;
+        background: rgba($base, 0.05);
+        box-shadow: inset 0 2px 2px 0px rgba($base, 0.15);
       }
     }
-    input {
+
+    input,
+    button:not(.delete) {
       outline: 0;
-      border: 0;
       box-shadow: 0;
     }
-  }
 
-  .delete-button svg {
-    fill: transparent;
-    width: 10px !important;
-    height: 10px !important;
-    opacity: 0.7;
-    &:hover {
-      fill: #e74c3c !important;
+    input {
+      outline: 0;
+      font-size: 1.2em;
+      width: 100%;
+      border-right: 1px solid rgba($base, 0.5);
+      border-radius: 3px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
-  .todoitem {
-    max-width: 50vw;
+  .done {
+    color: $done;
+
+    span {
+      text-decoration: line-through;
+    }
+  }
+
+  .todo-list {
+    text-align: left;
     display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    counter-increment: counter;
-    margin: 15px 0;
-    font-style: normal;
-    &:before {
-      content: counter(counter) '.';
-      margin-right: 10px;
-    }
-    &.done {
-      text-decoration-line: line-through !important;
-      color: #888;
+    flex-direction: column-reverse;
+    padding: 0rem;
+    margin: 0.25rem 0;
+
+    li {
+      display: flex;
+      margin: 2px auto;
+      flex-direction: row;
+      justify-content: space-between;
+
       &:hover {
-        color: #222;
-        text-decoration-line: none !important;
+        color: rgba($base, 0.45);
+      }
+
+      .delete {
+        background: white;
+        margin: 0 0.25rem;
+
+        &:after {
+          content: 'x';
+          color: $delete;
+
+          &:hover {
+            color: $base;
+          }
+        }
+
+        &:hover {
+          font-weight: bold;
+        }
       }
     }
-
-    &:hover {
-      font-style: italic;
-    }
-  }
-
-  .form-check {
-    margin: 0;
-    padding: 0;
   }
 }

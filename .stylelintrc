@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-recommended"
+  ],
+  "rules": {
+    "at-rule-no-unknown":null,
+    "rule-empty-line-before": [ "always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"]
+    } ]
+  }
+}

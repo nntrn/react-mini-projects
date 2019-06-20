@@ -66,6 +66,12 @@ export const references = {
       'https://daveceddia.com/ajax-requests-in-react/',
       'https://forecast-v3.weather.gov/documentation'
     ]
+  },
+  gitrepos: {
+    title: ['Create a Node JS application for Downloading sources from GitHub'],
+    url: [
+      'https://technology.amis.nl/2018/03/18/create-a-node-js-application-for-downloading-sources-from-github/'
+    ]
   }
   // new: {
   //   title: [],
