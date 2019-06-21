@@ -1,52 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Ajax from '../../service/Ajax'
 import './GitRepos.scss'
 
-const gitUser = 'nntrn'
-
-const git = {
-  user: 'nntrn',
-  repo: 'react-mini-projects'
-}
-
-const api = {
-  userRepos: `https://api.github.com/repos/${git.user}`,
-  commits: `https://api.github.com/repos/${git.user}/${git.repo}/commits`,
-  contents: `https://api.github.com/repos/${git.user}/${git.repo}/contents`,
-  contributiors: `https://api.github.com/repos/${git.user}/${git.repo}/contributors`
-}
-
-function Avi(props) {
-  return (
-    <div
-      className={'flex before'}
-      title={`${props.contributions} contributions by ${props.name} value=${props.contributions}`}
-    >
-      <div
-        className={'avi'}
-        style={props.img}
-        name={props.name}
-        contributions={props.contributions}
-      />
-    </div>
-  )
-}
-
-class Repos extends React.Component {
+class Contributors extends React.Component {
   render() {
-    const { repoName } = this.props
+    const { gitUser, repoName } = this.props
 
     const config = data => {
       return (
-        <div>
+        <div className={'contributions'}>
           {data.map((e, i) => {
             return (
-              <Avi
+              <div
                 key={i}
-                url={e.avatar_url}
-                img={{ backgroundImage: `url(${e.avatar_url})` }}
+                className={'avi after'}
+                style={{ backgroundImage: `url(${e.avatar_url})` }}
                 name={e.login}
-                contributions={e.contributions}
+                value={e.contributions}
+                title={`${e.contributions} contributions by ${e.login}`}
               />
             )
           })}
@@ -68,24 +39,22 @@ const parseDate = str => {
 
 class Github extends React.Component {
   render() {
-    const { url } = this.props
+    const { user } = this.props
 
     const config = data => {
       return (
         <div id="github-activity">
-          <h2 className="project-title">github repo API</h2>
-          <center>show user repos and their contributions</center>
           {Object.entries(data).map((e, i) => {
             return (
-              <div key={e[0]} className="my">
-                <h3>
-                  <a href={data[i]['html_url']}>{data[i]['name']}</a>
-                </h3>
-                <div>{e[1].description}</div>
-                <div className="before green" value="last updated: ">
+              <div key={e[0]} className="repo-container">
+                <a href={data[i]['html_url']} className="h3">
+                  {data[i]['name']}
+                </a>
+                <div className="repo-description">{data[i].description}</div>
+                <div className="before margin-top" value="last updated: ">
                   {parseDate(data[i]['updated_at'])}
                 </div>
-                <Repos repoName={data[i]['name']} />
+                <Contributors gitUser={user} repoName={data[i]['name']} />
               </div>
             )
           })}
@@ -93,14 +62,21 @@ class Github extends React.Component {
       )
     }
 
-    return <Ajax url={url} config={config} />
+    return <Ajax url={`//api.github.com/users/${user}/repos?sort=updated`} config={config} />
   }
 }
 
-class GitRepos extends React.Component {
-  render() {
-    return <Github url="//api.github.com/users/nntrn/repos?sort=created" />
-  }
+//TODO: add input to search other users
+function GitRepos() {
+  const [user, setUser] = useState('nntrn')
+
+  return (
+    <div>
+      <h2 className="project-title">github repo API</h2>
+      <center>display repo contributors</center>
+      <Github user={user} />
+    </div>
+  )
 }
 
 export default GitRepos

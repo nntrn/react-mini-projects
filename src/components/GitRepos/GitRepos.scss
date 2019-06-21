@@ -1,5 +1,4 @@
 $base: #222;
-$primary: #444;
 
 #github-activity {
   .section {
@@ -11,19 +10,10 @@ $primary: #444;
     margin: 0;
   }
 
-  .flex,
-  .avi {
-    display: inline-flex;
-    flex-wrap: wrap;
-    font-size: 0.8em;
-    flex-direction: row;
-  }
-
   .contributions {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 1px solid lighten($base, 60%);
+    padding-top: 0.25rem;
   }
 
   .avi {
@@ -36,44 +26,54 @@ $primary: #444;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
     align-items: center;
 
+    &:after {
+      margin-top: 2.25rem;
+      font-size: 12px;
+    }
+
+    &:hover {
+      border: 2px solid #2ecc71;
+    }
+
     &:hover:after {
       content: attr(name);
-      position: absolute;
       font-size: 11px;
-      bottom: 50%;
       line-height: 1;
       white-space: pre;
       color: white;
       background: black;
-      padding: 0 0.25rem;
+      padding: 0.25rem;
       z-index: 100;
+      border-radius: 5px;
     }
   }
 
-  .repo-list {
-    width: 250px;
-    white-space: pre-wrap;
+  .repo-container {
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid rgba($base, 0.3);
+    margin: 0.75rem 1rem;
 
-    .repo-name {
-      color: $base;
-      font-weight: bold;
-    }
-
-    .last-updated {
-      color: $primary;
+    &:hover {
+      box-shadow: 2px 0 4px 2px rgba($base, 0.05);
     }
   }
 
-  .my {
-    margin: 1rem 0.5rem;
+  .margin-top {
+    margin-top: 0.15rem;
   }
 
-  :before {
+  .before:before {
+    content: attr(value);
+  }
+
+  .after:after {
     content: attr(value);
   }
 }

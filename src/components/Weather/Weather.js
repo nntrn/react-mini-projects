@@ -34,7 +34,7 @@ class Weather extends React.Component {
             )}
           </table>
 
-          <div className="json">{JSON.stringify(data, null, 2)}</div>
+          {/* <div className="json">{JSON.stringify(data, null, 2)}</div> */}
           <a href="https://api.weather.gov/gridpoints/EWX/182,91/forecast">api.weather.gov</a>
         </div>
       )

@@ -5,53 +5,62 @@ $base: #222;
 #clock {
   display: block;
   user-select: none;
-  padding: 5rem 0;
+  padding: 2rem 0;
 
-  .ampm {
-    margin: 0 0.25rem;
-    border: 1px solid gray;
+  .clock {
+    box-shadow: 0 2px 3px 0 rgba($base, 0.2);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+    &.time-0 {
+      background: $yellow;
+    }
+    &.time-1 {
+      background: $blue;
+    }
 
-    &:hover {
-      transform: translateY(2px);
+    button {
+      border: 0;
+      box-shadow: 0 2px 0 0 rgba($base, 0.1);
+      outline: 0;
+      &:hover {
+        transition: all 50ms ease-out;
+        box-shadow: 0 0 0 0 rgba($base, 0);
+        transform: translateY(2px);
+      }
+    }
+    .ampm {
+      margin: 0 0.5rem;
+      padding: 0.35rem;
+      border-radius: 50%;
+      height: 30px;
+      weight: 30px;
+      background: transparent;
+      border: 1px solid rgba($base, 0.2);
+    }
+
+    .time-button {
+      font-size: 3em;
+      width: 60px;
+      font-weight: bold;
+      height: 60px;
+      margin: 0;
+      padding: 0;
+      border-radius: 5px;
     }
   }
-
-  .time-button {
-    font-size: 3em;
-    width: 70px;
-    margin: 0.25rem;
-    outline: 0;
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
-
-    &:hover {
-      transition: all 400ms ease-out;
-      transform: translateY(2px);
-    }
-  }
-
   .blinking {
-    padding: 0.25rem;
+    padding: 0 0.25rem;
     font-size: 3em;
-    animation: blinker 1100ms linear infinite;
+    animation: blinker 1000ms linear infinite;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
   }
 
   @keyframes blinker {
     50% {
       opacity: 0;
     }
-  }
-}
-
-.time-0 {
-  .clock {
-    background: $yellow;
-  }
-}
-
-.time-1 {
-  .clock {
-    background: $blue;
   }
 }
