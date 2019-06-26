@@ -72,6 +72,10 @@ export const references = {
     url: [
       'https://technology.amis.nl/2018/03/18/create-a-node-js-application-for-downloading-sources-from-github/'
     ]
+  },
+  github: {
+    title: ['React Router Example by taniarascia'],
+    url: ['https://github.com/taniarascia/router-example']
   }
   // new: {
   //   title: [],

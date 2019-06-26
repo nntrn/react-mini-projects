@@ -6,6 +6,7 @@ import Confetti from '../Confetti'
 import Clock from '../Clock'
 import Weather from '../Weather'
 import GitRepos from '../GitRepos'
+import Github from '../Github'
 
 import pages from './Source'
 import './layout.scss'
@@ -32,6 +33,7 @@ function Layout() {
           <Route path="/clock" exact component={Clock} />
           <Route path="/weather" exact component={Weather} />
           <Route path="/gitrepos" exact component={GitRepos} />
+          <Route path="/github" component={Github} />
         </Switch>
       </main>
     </div>
