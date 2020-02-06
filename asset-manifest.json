@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/react-mini-projects/static/css/main.5d503230.chunk.css",
-    "main.js": "/react-mini-projects/static/js/main.3ce7fd43.chunk.js",
-    "main.js.map": "/react-mini-projects/static/js/main.3ce7fd43.chunk.js.map",
-    "runtime~main.js": "/react-mini-projects/static/js/runtime~main.58882aaa.js",
-    "runtime~main.js.map": "/react-mini-projects/static/js/runtime~main.58882aaa.js.map",
-    "static/css/2.2012106d.chunk.css": "/react-mini-projects/static/css/2.2012106d.chunk.css",
-    "static/js/2.d00ff004.chunk.js": "/react-mini-projects/static/js/2.d00ff004.chunk.js",
-    "static/js/2.d00ff004.chunk.js.map": "/react-mini-projects/static/js/2.d00ff004.chunk.js.map",
+    "main.css": "/react-mini-projects/static/css/main.abb3ff51.chunk.css",
+    "main.js": "/react-mini-projects/static/js/main.c7415188.chunk.js",
+    "main.js.map": "/react-mini-projects/static/js/main.c7415188.chunk.js.map",
+    "runtime-main.js": "/react-mini-projects/static/js/runtime-main.fb5895c5.js",
+    "runtime-main.js.map": "/react-mini-projects/static/js/runtime-main.fb5895c5.js.map",
+    "static/css/2.5ca8b2ba.chunk.css": "/react-mini-projects/static/css/2.5ca8b2ba.chunk.css",
+    "static/js/2.236d31de.chunk.js": "/react-mini-projects/static/js/2.236d31de.chunk.js",
+    "static/js/2.236d31de.chunk.js.map": "/react-mini-projects/static/js/2.236d31de.chunk.js.map",
     "index.html": "/react-mini-projects/index.html",
-    "precache-manifest.3d4315fde7a51ecf500f9d01caf9f56f.js": "/react-mini-projects/precache-manifest.3d4315fde7a51ecf500f9d01caf9f56f.js",
+    "precache-manifest.a54639cd84ebc49797be20ec891cc77d.js": "/react-mini-projects/precache-manifest.a54639cd84ebc49797be20ec891cc77d.js",
     "service-worker.js": "/react-mini-projects/service-worker.js",
-    "static/css/2.2012106d.chunk.css.map": "/react-mini-projects/static/css/2.2012106d.chunk.css.map",
-    "static/css/main.5d503230.chunk.css.map": "/react-mini-projects/static/css/main.5d503230.chunk.css.map"
-  }
+    "static/css/2.5ca8b2ba.chunk.css.map": "/react-mini-projects/static/css/2.5ca8b2ba.chunk.css.map",
+    "static/css/main.abb3ff51.chunk.css.map": "/react-mini-projects/static/css/main.abb3ff51.chunk.css.map",
+    "static/js/2.236d31de.chunk.js.LICENSE.txt": "/react-mini-projects/static/js/2.236d31de.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb5895c5.js",
+    "static/css/2.5ca8b2ba.chunk.css",
+    "static/js/2.236d31de.chunk.js",
+    "static/css/main.abb3ff51.chunk.css",
+    "static/js/main.c7415188.chunk.js"
+  ]
 }
