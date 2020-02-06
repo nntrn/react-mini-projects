@@ -1,0 +1,32 @@
+$dark: #24292e;
+$light: #fff;
+
+body {
+  overflow: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.hover {
+  &-opacity {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  &-row {
+    flex-direction: row !important;
+  }
+  &-column {
+    flex-direction: column !important;
+  }
+}

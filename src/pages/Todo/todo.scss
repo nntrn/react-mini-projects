@@ -1,0 +1,93 @@
+$base: #222;
+$delete: #e74c3c;
+$done: #2ecc71;
+$gray: #aaaaaa;
+
+#todo {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.3em;
+
+  button {
+    border: 0;
+    outline: 0;
+  }
+
+  form {
+    display: flex;
+    margin: 0.25rem auto;
+    border-radius: 3px;
+    border: 4px solid #222;
+    padding: 0.25rem;
+
+    .submit {
+      font-size: inherit;
+      line-height: 1;
+      padding: 0.5rem;
+      &:hover {
+        color: $done;
+      }
+    }
+
+    input {
+      outline: 0;
+      width: 100%;
+      padding: 0.2rem;
+      border: 0;
+    }
+  }
+
+  .done {
+    span.task-item {
+      text-decoration: line-through;
+      color: $done;
+    }
+    span.completed-date {
+      font-size: 0.6em;
+      color: $gray;
+
+      &:before {
+        content: "Completed: ";
+      }
+    }
+  }
+
+  .todo-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0rem;
+    margin: 0.25rem 0;
+
+    li {
+      display: flex;
+      margin: 2px auto;
+      justify-content: space-between;
+      width: 100%;
+
+      div {
+        width: 100%;
+
+        span {
+          display: block;
+        }
+      }
+
+      &:hover {
+        color: rgba($base, 0.45);
+      }
+
+      .delete {
+        border: none;
+        background: transparent;
+
+        &:hover {
+          color: $delete;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+}

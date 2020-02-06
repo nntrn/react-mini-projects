@@ -15,8 +15,11 @@
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-jss": "^10.0.4",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^3.3.0",
+    "sanitize.css": "^11.0.0",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -28,6 +31,7 @@
   "scripts": {
     "clear-babel-cache": "rm -rf ./node_modules/.cache/babel-loader/*",
     "clean-build": "rm -rf build/ ",
+    "create-pages": "node scripts/get-pages.js ./src/pages",
     "css-lint": "stylelint \"src/**/*.scss\" --fix --cache --cache-location .cache/.stylelintcache",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -40,7 +44,50 @@
   "eslintConfig": {
     "extends": [
       "react-app"
-    ]
+    ],
+    "rules": {
+      "semi": ["error","never"],
+      "newline-per-chained-call": "off",
+      "array-bracket-newline": ["off","consistent"],
+      "array-element-newline": ["off",{"multiline":true,"minItems":3}],
+      "array-bracket-spacing": ["error","never"],
+      "block-spacing": ["error","always"],
+      "brace-style": ["error","1tbs",{"allowSingleLine":true}],
+      "comma-dangle": ["error",{"arrays":"always-multiline","objects":"always-multiline","imports":"always-multiline","exports":"always-multiline","functions":"always-multiline"}],
+      "comma-spacing": ["error",{"before":false,"after":true}],
+      "key-spacing": ["error",{"beforeColon":false,"afterColon":true}],
+      "keyword-spacing": ["error",{"before":true,"after":true,"overrides":{"return":{"after":true},"throw":{"after":true},"case":{"after":true}}}],
+      "line-comment-position": ["off",{"position":"above","ignorePattern":"","applyDefaultPatterns":true}],
+      "computed-property-spacing": ["error","never"],
+      "consistent-this": "off",
+      "eol-last": ["error","always"],
+      "linebreak-style": ["error","unix"],
+      "lines-between-class-members": ["error","always",{"exceptAfterSingleLine":false}],
+      "lines-around-comment": "off",
+      "lines-around-directive": ["error",{"before":"always","after":"always"}],
+      "padding-line-between-statements": "off",
+      "prefer-object-spread": "error",
+      "quote-props": ["error","as-needed",{"keywords":false,"unnecessary":true,"numbers":false}],
+      "quotes": ["error","single",{"avoidEscape":true}],
+      "require-jsdoc": "off",
+      "semi-spacing": ["error",{"before":false,"after":true}],
+      "semi-style": ["error","last"],
+      "sort-keys": ["off","asc",{"caseSensitive":false,"natural":true}],
+      "sort-vars": "off",
+      "space-before-blocks": "error",
+      "space-before-function-paren": ["error",{"anonymous":"always","named":"never","asyncArrow":"always"}],
+      "space-in-parens": ["error","never"],
+      "space-infix-ops": "error",
+      "space-unary-ops": ["error",{"words":true,"nonwords":false,"overrides":{}}],
+      "switch-colon-spacing": ["error",{"after":true,"before":false}],
+      "template-tag-spacing": ["error","never"],
+      "unicode-bom": ["error","never"],
+      "wrap-regex": "off",
+      "spaced-comment": ["error","always"],
+      "object-curly-newline": "off",
+      "function-paren-newline": ["off","consistent"],
+      "no-multiple-empty-lines": ["error",{"max":1,"maxEOF":1}]
+    }
   },
   "eslintIgnore": [
     "lib/*",
@@ -61,7 +108,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,json,md}": [],
     "*.js": [
       "eslint --fix",
       "git add"
