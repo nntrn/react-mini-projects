@@ -12,24 +12,22 @@
   "homepage": "https://nntrn.github.io/react-mini-projects/",
   "dependencies": {
     "axios": "^0.19.0",
-    "react": "^16.8.6",
-    "react-chartjs": "^1.2.0",
-    "react-dom": "^16.8.6",
-    "react-icomoon": "^1.0.1",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "^3.3.0"
   },
-  "prettier": {
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "tabWidth": 2
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "husky": "^2.4.1",
+    "install": "^0.12.2",
+    "lint-staged": "^8.2.1",
+    "npm-run-all": "^4.1.5"
   },
   "scripts": {
     "clear-babel-cache": "rm -rf ./node_modules/.cache/babel-loader/*",
     "clean-build": "rm -rf build/ ",
-    "prettier": "prettier --write src/**/*.{js,jsx,css}",
     "css-lint": "stylelint \"src/**/*.scss\" --fix --cache --cache-location .cache/.stylelintcache",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -39,30 +37,9 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint . --fix"
   },
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "eslint-plugin-react-hooks": "^1.6.0",
-    "gh-pages": "^2.0.1",
-    "husky": "^2.4.1",
-    "install": "^0.12.2",
-    "lint-staged": "^8.2.1",
-    "node-sass": "^4.12.0",
-    "node-sass-chokidar": "^1.3.5",
-    "npm": "^6.9.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "prettier-stylelint": "^0.4.2",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0"
-  },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
+      "react-app"
     ]
   },
   "eslintIgnore": [
@@ -77,5 +54,21 @@
     ">0.2%",
     "not dead",
     "not ie <= 11"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  }
 }
