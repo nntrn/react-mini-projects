@@ -30,7 +30,7 @@ export default function UserPage() {
   // Return a table with some data from the API.
   return (
     <div className="main">
-      {JSON.stringify(userRepo,null,2)}
+      {JSON.stringify(userRepo, null, 2)}
       {/* <h1>{inputValue}</h1>
       <form onSubmit={handleSubmit}>
         <input value={inputValue} onChange={e => setValue(e.target.value)} />
@@ -48,5 +48,5 @@ export default function UserPage() {
         })}
       </div> */}
     </div>
-  );
+  )
 }

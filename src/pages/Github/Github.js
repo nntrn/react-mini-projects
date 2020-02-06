@@ -12,7 +12,7 @@ function Contributors(props) {
     const getRepo = async () => {
       // Pass our param (:id) to the API call
       const { data } = await axios(
-        `https://api.github.com/repos/${props.user}/${props.repo}/contributors`
+        `https://api.github.com/repos/${props.user}/${props.repo}/contributors`,
       )
       // Update state
       setRepo(data)
@@ -47,8 +47,7 @@ export default function Github() {
   }
 
   return (
-    <div className="main">
-      <h2 className="project-title">Github</h2>
+    <>
       <center>
         <h4>user lookup: {inputValue}</h4>
         <form onSubmit={handleSubmit}>
@@ -68,6 +67,6 @@ export default function Github() {
           )
         })}
       </div>
-    </div>
+    </>
   )
 }

@@ -1,18 +1,19 @@
-import React from "react";
-import { grab } from "../utils";
+import React from 'react'
+import { grabFirst as grab, stringMethods as $s } from '../utils'
 
 export const Component = props => {
-  const { m, my, mx, mt, mr, mb, ml, p, py, px, pt, pr, pb, pl, ...props2 } = props;
+  const { m, my, mx, mt, mr, mb, ml, p, py, px, pt, pr, pb, pl, padding, margin, ...props2 } = props
 
   const {
-    component: Component = props.as || "div",
+    component: Component = props.as || 'div',
     as,
     children,
-    padding,
-    margin,
     style,
+    theme,
+    color,
+    className,
     ...attr
-  } = props2;
+  } = props2
 
   const spacing = {
     marginTop: grab(mt, my, m, margin),
@@ -22,14 +23,14 @@ export const Component = props => {
     paddingTop: grab(pt, py, p, padding),
     paddingRight: grab(pr, px, p, padding),
     paddingBottom: grab(pb, py, p, padding),
-    paddingLeft: grab(pl, px, p, padding)
-  };
+    paddingLeft: grab(pl, px, p, padding),
+  }
 
   return (
-    <Component {...attr} style={{ ...spacing, ...style }}>
+    <Component className={$s.list(color, theme, className)} {...attr} style={{ ...spacing, ...style }}>
       {children}
     </Component>
-  );
-};
+  )
+}
 
-export default Component;
+export default Component

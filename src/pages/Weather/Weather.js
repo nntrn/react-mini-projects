@@ -11,6 +11,7 @@ class Weather extends React.Component {
         <div id="weather">
           <h2 className="project-title">weather API</h2>
           <table>
+            <tbody>
             {data.properties['periods'].map(
               req =>
                 req.name.indexOf('Night') === -1 && (
@@ -20,7 +21,7 @@ class Weather extends React.Component {
                         new Date(`${req.startTime}`)
                           .toLocaleString('en-US', {
                             month: 'long',
-                            day: 'numeric'
+                            day: 'numeric',
                           })
                           .split(',')[0]
                       }
@@ -30,8 +31,9 @@ class Weather extends React.Component {
                       {req.temperature}&#176;{req.temperatureUnit}
                     </td>
                   </tr>
-                )
-            )}
+                ),
+              )}
+              </tbody>
           </table>
 
           {/* <div className="json">{JSON.stringify(data, null, 2)}</div> */}

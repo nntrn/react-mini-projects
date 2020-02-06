@@ -9,7 +9,7 @@ export default class Ajax extends React.Component {
     this.state = {
       ajaxRequests: [],
       loading: true,
-      error: null
+      error: null,
     }
   }
 
@@ -22,13 +22,13 @@ export default class Ajax extends React.Component {
         this.setState({
           ajaxRequests,
           loading: false,
-          error: null
+          error: null,
         })
       })
       .catch(err => {
         this.setState({
           loading: false,
-          error: err
+          error: err,
         })
       })
   }
@@ -59,5 +59,5 @@ export default class Ajax extends React.Component {
 Ajax.propTypes = {
   url: PropTypes.string,
   config: PropTypes.object,
-  entries: PropTypes.array
+  entries: PropTypes.array,
 }

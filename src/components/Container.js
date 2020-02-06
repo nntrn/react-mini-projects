@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
@@ -19,8 +19,8 @@ const Container = styled.div`
   & nav {
     flex-grow: 1;
   }
-`;
+`
 
 export default function ({children, ...attr}) {
-  return <Container {...attr}>{children}</Container>;
+  return <Container {...attr}>{children}</Container>
 }
