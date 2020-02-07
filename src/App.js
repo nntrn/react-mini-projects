@@ -24,7 +24,7 @@ const App = props => {
           <ul>
             {Object.keys(pages).map(page => (
               <li key={page}>
-                <Link to={`./${page}`} onClick={() => handleHour(page)}>
+                <Link to={`/react-mini-projects/${page}`} onClick={() => handleHour(page)}>
                   {page}
                 </Link>
               </li>
@@ -35,7 +35,7 @@ const App = props => {
           <div className="page">
             <Title className="page-title">{page}</Title>
             <Switch>
-              <Route path={'/' + page} component={pages[page]} />
+              <Route path={`/react-mini-projects/${page}`} component={pages[page]} />
             </Switch>
             <div style={{ paddingBottom: '5rem' }} />
           </div>

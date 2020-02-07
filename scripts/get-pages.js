@@ -7,12 +7,13 @@ function init(directories) {
   const pageExport = []
 
   directories.forEach(e => {
-    pageImport.push(`import ${e} from '../pages/${e}';`)
+    pageImport.push(`import ${e} from '../pages/${e}'`)
     pageExport.push(`\t${e}: ${e},`)
   })
 
   const writeToFile = [
     "// this file is created by './scripts/get-pages.js' and used in App.js\n",
+    "import React from 'react'",
     pageImport.join('\n'),
     '\nconst pages = {',
     pageExport.join('\n'),

@@ -1,5 +1,6 @@
 // this file is created by './scripts/get-pages.js' and used in App.js
 
+import React from 'react'
 import Clock from '../pages/Clock'
 import GitRepos from '../pages/GitRepos'
 import Github from '../pages/Github'
