@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-mini-projects/static/css/main.abb3ff51.chunk.css",
-    "main.js": "/react-mini-projects/static/js/main.5014a386.chunk.js",
-    "main.js.map": "/react-mini-projects/static/js/main.5014a386.chunk.js.map",
+    "main.css": "/react-mini-projects/static/css/main.6e153593.chunk.css",
+    "main.js": "/react-mini-projects/static/js/main.387abc96.chunk.js",
+    "main.js.map": "/react-mini-projects/static/js/main.387abc96.chunk.js.map",
     "runtime-main.js": "/react-mini-projects/static/js/runtime-main.fb5895c5.js",
     "runtime-main.js.map": "/react-mini-projects/static/js/runtime-main.fb5895c5.js.map",
     "static/css/2.5ca8b2ba.chunk.css": "/react-mini-projects/static/css/2.5ca8b2ba.chunk.css",
-    "static/js/2.236d31de.chunk.js": "/react-mini-projects/static/js/2.236d31de.chunk.js",
-    "static/js/2.236d31de.chunk.js.map": "/react-mini-projects/static/js/2.236d31de.chunk.js.map",
+    "static/js/2.13e2b24f.chunk.js": "/react-mini-projects/static/js/2.13e2b24f.chunk.js",
+    "static/js/2.13e2b24f.chunk.js.map": "/react-mini-projects/static/js/2.13e2b24f.chunk.js.map",
     "index.html": "/react-mini-projects/index.html",
-    "precache-manifest.28078323735eae2c5481e726569d9b72.js": "/react-mini-projects/precache-manifest.28078323735eae2c5481e726569d9b72.js",
+    "precache-manifest.e6f4321624b36ce768319b85c71060a8.js": "/react-mini-projects/precache-manifest.e6f4321624b36ce768319b85c71060a8.js",
     "service-worker.js": "/react-mini-projects/service-worker.js",
     "static/css/2.5ca8b2ba.chunk.css.map": "/react-mini-projects/static/css/2.5ca8b2ba.chunk.css.map",
-    "static/css/main.abb3ff51.chunk.css.map": "/react-mini-projects/static/css/main.abb3ff51.chunk.css.map",
-    "static/js/2.236d31de.chunk.js.LICENSE.txt": "/react-mini-projects/static/js/2.236d31de.chunk.js.LICENSE.txt"
+    "static/css/main.6e153593.chunk.css.map": "/react-mini-projects/static/css/main.6e153593.chunk.css.map",
+    "static/js/2.13e2b24f.chunk.js.LICENSE.txt": "/react-mini-projects/static/js/2.13e2b24f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb5895c5.js",
     "static/css/2.5ca8b2ba.chunk.css",
-    "static/js/2.236d31de.chunk.js",
-    "static/css/main.abb3ff51.chunk.css",
-    "static/js/main.5014a386.chunk.js"
+    "static/js/2.13e2b24f.chunk.js",
+    "static/css/main.6e153593.chunk.css",
+    "static/js/main.387abc96.chunk.js"
   ]
 }
