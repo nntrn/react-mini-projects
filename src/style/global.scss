@@ -3,6 +3,11 @@ $light: #fff;
 
 body {
   overflow: auto;
+  font-family: sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 
 .center {

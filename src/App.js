@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
+import SvgIcon from './components/SvgIcon'
 import Component from './components/Component'
 
 import pages from './data/pages'
@@ -11,7 +12,7 @@ import 'sanitize.css'
 const Header = props => <Component as="h2" id="sidebar" p="0" m="0" {...props} />
 
 const App = props => {
-  const [page, setPage] = useState(window.location.pathname.replace(/[^\w]/g, ''))
+  const [page, setPage] = useState('')
   const handleHour = p => setPage(p)
 
   return (
@@ -19,7 +20,7 @@ const App = props => {
       <Container theme={{ ...props.theme }}>
         <Component as="nav" p="1rem" className="dark">
           <Header className="title">
-            <a href="https://github.com/nntrn/react-mini-projects">react-mini-projects</a>
+            <Link to="/">react-mini-projects</Link>
           </Header>
           <ul>
             {Object.keys(pages).map(page => (
@@ -41,7 +42,14 @@ const App = props => {
           </div>
         </Component>
       </Container>
-      <Footer>&copy; annie tran</Footer>
+      <Footer>
+        <SvgIcon viewBox="0 0 16 16" size="24" fill="#aaa" className="hover-opacity">
+          <path
+            fillRule="evenodd"
+            d="M8 0a8 8 0 00-2.5 15.6c.4 0 .5-.2.5-.4v-1.5c-2 .4-2.5-.5-2.7-1 0-.1-.5-.9-.8-1-.3-.2-.7-.6 0-.6.6 0 1 .6 1.2.8.7 1.2 1.9 1 2.4.7 0-.5.2-.9.5-1-1.8-.3-3.7-1-3.7-4 0-.9.3-1.6.8-2.2 0-.2-.3-1 .1-2 0 0 .7-.3 2.2.7a7.4 7.4 0 014 0c1.5-1 2.2-.8 2.2-.8.5 1.1.2 2 .1 2.1.5.6.8 1.3.8 2.2 0 3-1.9 3.7-3.6 4 .3.2.5.7.5 1.4v2.2c0 .2.1.5.5.4A8 8 0 0016 8a8 8 0 00-8-8z"
+          />
+        </SvgIcon>
+      </Footer>
     </Router>
   )
 }
@@ -52,15 +60,17 @@ const Title = styled.h1`
 `
 
 const Footer = styled.footer`
-padding:.25rem;
-text-align:center;
-font-size:.9em;
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.9em;
+  position: fixed;
+  bottom: 0;
 `
 
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height:100%;
+  height:100vh;
 
   & > * {
     padding: 0.5rem;
@@ -69,7 +79,7 @@ const Container = styled.div`
   & main {
     flex-grow: 3;
     background: ${props => props.theme.background};
-    height: 100vh;
+    height: 100%;
     overflow-y: scroll;
     & .page {
       padding: 1.5rem;
@@ -101,6 +111,9 @@ const Container = styled.div`
     @media (min-width: 600px) {
       ul {
         display: block;
+      }
+      main {
+        width: 100%;
       }
       nav {
         position: sticky;

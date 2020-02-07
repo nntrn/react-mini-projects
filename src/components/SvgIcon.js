@@ -11,7 +11,7 @@ export default function SvgIcon(props) {
 
   return (
     <svg
-      className={['icon', color, className].join(' ')}
+      className={['icon', color, className].filter(Boolean).join(' ')}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       {...svgSize}
