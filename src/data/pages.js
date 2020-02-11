@@ -8,11 +8,11 @@ import Todo from '../pages/Todo'
 import Weather from '../pages/Weather'
 
 const pages = {
-	Clock: Clock,
-	GitRepos: GitRepos,
-	Github: Github,
-	Todo: Todo,
-	Weather: Weather,
+	Clock: <Clock/>,
+	GitRepos: <GitRepos/>,
+	Github: <Github/>,
+	Todo: <Todo/>,
+	Weather: <Weather/>,
 }
 
 export default pages

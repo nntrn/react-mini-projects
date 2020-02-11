@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link, useParams } from 'react-router-dom'
 
 import SvgIcon from './components/SvgIcon'
 import Component from './components/Component'
@@ -12,9 +12,6 @@ import 'sanitize.css'
 const Header = props => <Component as="h2" id="sidebar" p="0" m="0" {...props} />
 
 const App = props => {
-  const [page, setPage] = useState('')
-  const handleHour = p => setPage(p)
-
   return (
     <Router>
       <Container theme={{ ...props.theme }}>
@@ -25,22 +22,16 @@ const App = props => {
           <ul>
             {Object.keys(pages).map(page => (
               <li key={page}>
-                <Link to={`/react-mini-projects/${page}`} onClick={() => handleHour(page)}>
+                <Link to={`/react-mini-projects/${page}`}>
                   {page}
                 </Link>
               </li>
             ))}
           </ul>
         </Component>
-        <Component as="main">
-          <div className="page">
-            <Title className="page-title">{page}</Title>
-            <Switch>
-              <Route path={`/react-mini-projects/${page}`} component={pages[page]} />
-            </Switch>
-            <div style={{ paddingBottom: '5rem' }} />
-          </div>
-        </Component>
+        <Switch>
+          <Route path="/react-mini-projects/:id" children={<Child />} />
+        </Switch>
       </Container>
       <Footer>
         <a href="https://github.com/nntrn/react-mini-projects">
@@ -53,6 +44,21 @@ const App = props => {
         </a>
       </Footer>
     </Router>
+  )
+}
+
+// https://reacttraining.com/react-router/web/example/url-params
+function Child() {
+  let { id } = useParams()
+
+  return (
+    <Component as="main">
+      <div className="page">
+        <Title className="page-title">{id}</Title>
+        <>{pages[id]}</>
+        <div style={{ paddingBottom: '5rem' }} />
+      </div>
+    </Component>
   )
 }
 

@@ -34,7 +34,7 @@
     "create-pages": "node scripts/get-pages.js ./src/pages",
     "css-lint": "stylelint \"src/**/*.scss\" --fix --cache --cache-location .cache/.stylelintcache",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run create-pages && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

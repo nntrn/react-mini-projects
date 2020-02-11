@@ -8,7 +8,7 @@ function init(directories) {
 
   directories.forEach(e => {
     pageImport.push(`import ${e} from '../pages/${e}'`)
-    pageExport.push(`\t${e}: ${e},`)
+    pageExport.push(`\t${e}: <${e}/>,`)
   })
 
   const writeToFile = [
